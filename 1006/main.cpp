@@ -12,7 +12,10 @@ int main() {
             cin >> arr[0][i];
         for(int i = 0; i < N; i++)
             cin >> arr[1][i];
+
+        r
+
+
     }
-    
     return 0;
 }
