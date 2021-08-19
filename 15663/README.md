@@ -1,7 +1,7 @@
-# 백준 15654번
+# 백준 15663번
 
-## N 과 M(5)
-https://www.acmicpc.net/problem/15654
+## N 과 M(12)
+https://www.acmicpc.net/problem/15663
 ___
 ## 풀이 전.
 > 그냥 N과 M 문제 변형...
