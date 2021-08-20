@@ -1,7 +1,7 @@
 # 백준 5525번
 
 ## IOIOI
-https://www.acmicpc.net/problem/52525
+https://www.acmicpc.net/problem/5525
 ___
 ## 풀이 전.
 > N과 M의 개수로 봐서 대놓고 너 find 쓰면 time limit 뜰거야 하는 문제 </br>
