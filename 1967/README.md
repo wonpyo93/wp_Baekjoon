@@ -1,6 +1,6 @@
 # 백준 1967번
 
-## 거짓말
+## 트리의 지름
 https://www.acmicpc.net/problem/1967
 ___
 ## 풀이 전.

@@ -1,6 +1,6 @@
 # 백준 1149번
 
-## 거짓말
+## RGB거리
 https://www.acmicpc.net/problem/1149
 ___
 ## 풀이 전.

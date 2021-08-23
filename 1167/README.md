@@ -1,6 +1,6 @@
 # 백준 1167번
 
-## 거짓말
+## 트리의 지름
 https://www.acmicpc.net/problem/1167
 ___
 ## 풀이 전.

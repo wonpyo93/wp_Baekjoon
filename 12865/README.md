@@ -1,6 +1,6 @@
 # 백준 12865번
 
-## 거짓말
+## 평범한 배낭
 https://www.acmicpc.net/problem/12865
 ___
 ## 풀이 전.
