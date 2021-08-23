@@ -14,7 +14,7 @@ matrix matmul(matrix& a, matrix& b) {
 				temp[i][j] += a[i][k] * b[k][j];
 			temp[i][j] %= MOD;
 		}
-	return temp;	
+	return temp;
 }
 
 int main() {
