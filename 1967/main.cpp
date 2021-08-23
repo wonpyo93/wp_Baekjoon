@@ -7,9 +7,9 @@ struct Node {
     int index;
     int dist;
 };
-int V, maxDist, maxNode, start, finish, dist;
-bool visit[100001];
-vector<Node> arr[100001];
+int N, maxDist, maxNode, start, finish, dist;
+bool visit[10001];
+vector<Node> arr[10001];
 
 void dfs(int node, int dist) {
     if (visit[node])
@@ -25,24 +25,20 @@ void dfs(int node, int dist) {
         dfs(nextIndex, nextDist + dist);
     }
 }
-int main() {
-    cin >> V;
-    for(int i = 1; i < V + 1; i++) {
-        cin >> start;
-        while(true) {
-            cin >> finish;
-            if (finish == -1)
-                break;
-            cin >> dist;
-            arr[start].push_back({finish, dist});
-            arr[finish].push_back({start, dist});
-        }
+
+int main(void) {
+    memset(visit, false, sizeof(visit));
+    cin >> N;
+    for (int i = 1; i < N; i++) {
+        int node1, node2, cost;
+        cin >> node1 >> node2 >> cost;
+        arr[node1].push_back({node2, cost});
+        arr[node2].push_back({node1, cost});
     }
     dfs(1, 0);
-    memset(visit, 0, sizeof(visit));
+    memset(visit, false, sizeof(visit));
     maxDist = 0;
     dfs(maxNode, 0);
-
     cout << maxDist;
     return 0;
 }
