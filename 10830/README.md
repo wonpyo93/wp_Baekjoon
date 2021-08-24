@@ -1,6 +1,6 @@
 # 백준 10830
 
-## 플로이드
+## 행렬 제곱
 https://www.acmicpc.net/problem/10830
 ___
 ## 풀이 전.
