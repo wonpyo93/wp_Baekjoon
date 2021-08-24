@@ -1,6 +1,6 @@
 # 백준 11279
 
-## 최소 힙
+## 최대 힙
 https://www.acmicpc.net/problem/11279
 ___
 ## 풀이 전.

@@ -1,6 +1,6 @@
 # 백준 11286
 
-## 최소 힙
+## 절댓값 힙
 https://www.acmicpc.net/problem/11286
 ___
 ## 풀이 전.
