@@ -1,6 +1,6 @@
 # 백준 1149번
 
-## RGB거리
+## RGB 거리
 https://www.acmicpc.net/problem/1149
 ___
 ## 풀이 전.
