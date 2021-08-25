@@ -1,40 +1,73 @@
 #include <iostream>
 #include <string.h>
+#include <vector>
 using namespace std;
 
-int T, N, x[101], start, finish;
-
-void reverse(int arr[], int start, int end) {
-    while(start < end) {
-        int temp = arr[start];
-        arr[start] = arr[end];
-        arr[end] = temp;
-        start++;
-        end--;
-    }
-}    
+int T, sz, start, finish;
+bool rev, done;
 
 int main() {
-    ios::sync_with_stdio(0);
-	cin.tie(0);
-    cin >> T;
-    for(int t = 0; t < T; t++) {
-        string P;
-        cin >> P;
-        cin >> N;
-        start = 0; finish = N - 1;
-        for(int i = 0; i < N; i++)
-            cin >> x[i];
-        for(int p = 0; p < P.length(); p++) {
-            if(P[p] == 'R') {
-                if(p + 1 < P.length() && P[p+1] == 'R') {
-                    p++;
-                    continue;
-                }
-                else {
+	cin >> T;
+	for(int t = 0; t < T; t++) {
+        string str, arr, tmp;
 
-                }
-            }
-        }
-    }
+        //receive basic input
+		cin >> str >> sz >> arr;
+        vector<int> vec;
+
+        //receive vector input
+		for(int i = 0; i < arr.length(); i++) {
+			if('0' <= arr[i] && arr[i] <= '9')
+				tmp += arr[i];
+			else {
+				if(tmp.length() != 0) {
+					vec.push_back(stoi(tmp));
+					tmp.clear();
+				}
+			}
+		}
+
+        //initialize
+        done = false;
+		rev = false;
+		start = 0;
+        finish = sz;
+
+        //func
+		for(int i = 0; i < str.length(); i++) {
+			if(str[i] == 'R')
+				rev = !(rev);
+			else {
+				if(rev) finish--;
+				else start++;
+				if(start > finish) {
+					done = true;
+					break;
+				}
+			}
+		}
+
+        //print answer
+		if(done)
+            cout << "error" << endl;
+		else{
+            cout << "[";
+			if(rev) {
+				for(int i = finish - 1; i >= start; i--) {
+                    cout << vec[i];
+					if(i != start)
+                        cout << ",";
+				}
+			}
+			else {
+				for(int i = start; i < finish; i++) {
+                    cout << vec[i];
+					if (i != finish - 1)
+                        cout << ",";
+				}
+			}
+            cout << "]" << endl;
+		}
+	}
+    return 0;
 }
