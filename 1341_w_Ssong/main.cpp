@@ -36,16 +36,16 @@ int func() {
 		return 0;
 	}
 
-	for(int repLen = 1; repLen <= 60; repLen++) {
+	for(int len = 1; len <= 60; len++) {
         repeat = true;
-		string tmp_str = str.substr(0, repLen);
-        int idx = repLen;
-        while(repLen + idx <= 120) {
-            if(str.substr(idx, repLen) != tmp_str) {
+		string tmp_str = str.substr(0, len);
+        int idx = len;
+        while(len + idx <= 120) {
+            if(str.substr(idx, len) != tmp_str) {
                 repeat = false;
 				break;
 			}
-            idx += repLen;
+            idx += len;
         }
 
         if(repeat == true) {
