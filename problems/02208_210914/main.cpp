@@ -4,7 +4,7 @@
 using namespace std;
 
 int N, M, ans, tmp;
-int arr[10001];
+int arr[100001];
 
 int main() {
     ios::sync_with_stdio(0);
