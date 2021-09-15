@@ -19,7 +19,7 @@ int main() {
         finish = str.size() + 2;
     }
     else {
-        finish = str.size() + 1
+        finish = str.size() + 1;
     }
 	
 	while(finish > 2) {
