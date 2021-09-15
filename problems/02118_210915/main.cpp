@@ -6,13 +6,16 @@ using namespace std;
 
 int ans, N, arr[50001], sum[50001], rev[50001];
 
-int search(int arr[], int N, const int& v){
-    int l=0, r=N-1;
-    while(l <= r){
-        int m = (l+r)/2;
-        if(arr[m] == v) return arr[m];
-        else if(arr[m] < v) l = m+1;
-        else r = m-1;
+int func(int arr[], int N, int v) {
+    int l = 0, r = N - 1;
+    while(l <= r) {
+        int m = (l + r) / 2;
+        if(arr[m] == v)
+            return arr[m];
+        else if(arr[m] < v)
+            l = m + 1;
+        else
+            r = m - 1;
     }
     return arr[r];
 }
@@ -43,12 +46,12 @@ int main() {
     ans = 0;
 
     for(int i = 0; i < N; i++) {
-        int tmp = search(sum + i + 1, N - i, midSum + sum[i]) - sum[i];
+        int tmp = func(sum + i + 1, N - i, midSum + sum[i]) - sum[i];
         ans = max(ans, min(tmp, totalSum - tmp));
     }
     
     for(int i = 0; i < N; i++) {
-        int tmp = search(rev, N - i, midSum - sum[i]) + sum[i];
+        int tmp = func(rev, N - i, midSum - sum[i]) + sum[i];
         ans = max(ans, min(tmp, totalSum - tmp));
     }
     
