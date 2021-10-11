@@ -18,7 +18,6 @@ ___
 ~~~
 //cout << endl에서 endl보다 '\n'을 쓰는게 더 효율적이다. 그러므로 처음부터 endl 대신 '\n'을 쓰도록 define 해준다.
 #define endl '\n'
-
 //cin과 cout reset과,
 //C 표준 stream과 C++ 표준 stream의 동기화를 끊는다.
 //동기화를 끊으면 사용하는 버퍼의 수가 줄어들어 실행속도 자체는 크게 향상된다.
