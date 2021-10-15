@@ -5,6 +5,7 @@ using namespace std;
 
 int N, K, coin[101], cache[10001];
 
+//전형적인 coin DP 문제.
 int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
