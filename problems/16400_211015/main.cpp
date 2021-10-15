@@ -38,8 +38,8 @@ int main() {
     findPrime();
     arr[0] = 1;
     
-    for (int i = 0; i < p.size(); i++)
-        for (int j = p[i]; j <= N; j++) {
+    for(int i = 0; i < p.size(); i++)
+        for(int j = p[i]; j <= N; j++) {
             arr[j] = (arr[j] + arr[j - p[i]]) % MOD;
             arr[j] %= MOD;
         }
