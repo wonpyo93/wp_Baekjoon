@@ -6,7 +6,7 @@
 #include<queue>
 using namespace std;
 
-#define endl '\n'
+#define endl '\n' 
 #define ll long long
 #define lld long double
 
